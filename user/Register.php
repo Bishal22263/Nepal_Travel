@@ -148,6 +148,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </label>
 
                 <button type="submit" id="createBtn" class="create-btn">Create Account</button>
+
+<div id="spinnerBox" class="spinner-box" style="display: none;">
+    <div class="spinner"></div>
+</div>
             </form>
 
         </div>
