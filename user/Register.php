@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <div id="googleButtonContainer"></div>
 
-               <button type="button" onclick="facebookLogin()" class="social-btn facebook">
+<button type="button" onclick="facebookLogin()" class="social-btn facebook">
     Continue with Facebook
 </button>
             </div>
@@ -157,13 +157,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
     </div>
 
-    <div class="right-panel">
-        <div class="overlay-text">Find your next peak.</div>
-    </div>
+    <div class="overlay-text">
+  <span class="small-text">LET'S EXPLORE</span>
+  <span class="big-text">NEPAL</span>
+</div>
 </div>
 
 <script src="assets/register.js"></script>
-<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://accounts.google.com/gsi/client?hl=en"  async defer></script>
 <script>
   function handleGoogleResponse(response) {
     const idToken = response.credential;
@@ -183,25 +184,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     xhr.send("id_token=" + encodeURIComponent(idToken));
   }
 
-  window.onload = function () {
-    google.accounts.id.initialize({
-      client_id: "1045079519630-reec2mcusabp0hg13bufjrmnpvm2a0jb.apps.googleusercontent.com",
-      callback: handleGoogleResponse
-    });
+window.onload = function () {
+  const googleContainer = document.getElementById("googleButtonContainer");
 
-    google.accounts.id.renderButton(
-      document.getElementById("googleButtonContainer"),
-      {
-        type: "standard",
-        theme: "outline",
-        size: "large",
-        text: "continue_with",
-        shape: "rectangular",
-        logo_alignment: "left",
-        width: 220
-      }
-    );
-  };
+  google.accounts.id.initialize({
+    client_id: "1045079519630-reec2mcusabp0hg13bufjrmnpvm2a0jb.apps.googleusercontent.com",
+    callback: handleGoogleResponse
+  });
+
+  google.accounts.id.renderButton(
+    googleContainer,
+    {
+      type: "standard",
+      theme: "outline",
+      size: "large",
+      text: "continue_with",
+      shape: "rectangular",
+      logo_alignment: "left",
+      width:300,
+      locale: "en"
+    }
+  );
+};
 </script>
 <!-- Facebook -->
 <div id="fb-root"></div>
