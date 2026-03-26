@@ -1,0 +1,163 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("mountain.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: transparent; /* important */
+}
+
+/* MAIN CONTAINER */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDE (GLASS EFFECT) */
+.left-panel {
+  width: 35%;
+  background: rgba(255, 255, 255, 0.2); /* transparent */
+  backdrop-filter: blur(12px); /* glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FORM BOX */
+.form-box {
+  width: 300px;
+  color: #000;
+}
+
+/* TITLE */
+.form-box h1 {
+  color: #0e4d1d;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* LOGIN TEXT */
+.login-text {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-text a {
+  color: #0e4d1d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* SOCIAL BUTTONS */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#googleButtonContainer {
+  width: 100%;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+}
+
+.google {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.facebook {
+  background: rgba(59, 89, 152, 0.8);
+  color: white;
+}
+
+/* DIVIDER */
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #555;
+}
+
+/* INPUT FIELDS */
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  outline: none;
+}
+
+form input::placeholder {
+  color: #555;
+}
+
+/* TERMS */
+.terms {
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* BUTTON */
+.create-btn {
+  width: 100%;
+  padding: 12px;
+  background: #0e4d1d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.create-btn:hover {
+  background: #0a3a15;
+}
+
+/* RIGHT SIDE (EMPTY NOW, IMAGE IS ON BODY) */
+.right-panel {
+  width: 65%;
+  background: transparent;
+  position: relative;
+}
+
+/* TEXT OVER IMAGE */
+.overlay-text {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
