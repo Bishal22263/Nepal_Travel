@@ -144,3 +144,21 @@ phoneInput.addEventListener("input", function () {
 
   xhr.send("phone=" + encodeURIComponent(phone));
 });
+
+// ===== SPINNER ON SUBMIT =====
+const form = document.querySelector("form");
+const spinnerBox = document.getElementById("spinnerBox");
+
+form.addEventListener("submit", function () {
+  // 🚫 prevent spinner if validation not passed
+  if (!emailValid || !usernameValid || !phoneValid) {
+    return;
+  }
+
+  createBtn.disabled = true;
+  createBtn.style.opacity = "0.6";
+  createBtn.style.cursor = "not-allowed";
+  createBtn.innerText = "Please wait...";
+
+  spinnerBox.style.display = "flex";
+});
