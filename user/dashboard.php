@@ -14,6 +14,8 @@ if (!isset($_SESSION['user_id'])) {
 <body>
     <h2>Welcome, <?php echo htmlspecialchars($_SESSION['user_name']); ?></h2>
     <p>Email: <?php echo htmlspecialchars($_SESSION['user_email']); ?></p>
+    <p>Email: <?php echo htmlspecialchars($_SESSION['user_email']); ?></p>
+    <p>Email: <?php echo htmlspecialchars($_SESSION['user_email']); ?></p>
     <a href="logout.php">Logout</a>
 </body>
 </html>
